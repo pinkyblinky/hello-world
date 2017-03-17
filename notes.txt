@@ -1,0 +1,2 @@
+MAR 16, 2017
+- got up to buffers in the emacs tutoria

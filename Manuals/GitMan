@@ -1,0 +1,6 @@
+Resources:
+
+https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository
+
+Put your code onto the server as the new 'master'
+git push origin master -m 'version number'
