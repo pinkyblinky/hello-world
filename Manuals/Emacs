@@ -1,6 +1,8 @@
 GOOD RESOURCES:
 
 https://www.gnu.org/software/emacs/tour/
+For latex:
+https://piotrkazmierczak.com/2010/emacs-as-the-ultimate-latex-editor/
 
 DOCUMENTATION
 
@@ -72,4 +74,9 @@ FILE MANAGEMENT
 BUFFER DESCRIPTIONS
 *Messages* = Contains all the messages that were displayed at the bottom of your session
 
+.emacs FILE
+*(set-face-attribute 'default nil :height 100) = set font size to 10 (100/10)
 
+LATEX
+* C-c c-b = TeX print the entire buffer (current buffer)
+* C-c C-c = Compile everything including the BibTex on the current buffer

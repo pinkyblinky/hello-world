@@ -1,6 +1,8 @@
 Resources:
 
 https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository
-
+git add = add the file to the commit status
+git commit = commit the files to be submitted
 Put your code onto the server as the new 'master'
 git push origin master -m 'version number'
+
