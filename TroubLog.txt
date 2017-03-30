@@ -1,0 +1,8 @@
+> integer error!
+- create a working version in MathTutor
+  > succeessfully displayed
+- put it into the __init__ function of Welcome
+  > it worked!
+- put it into the setup function
+  > it worked!
+END LOG

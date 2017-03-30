@@ -1,0 +1,26 @@
+import pygame
+
+class Level1(object):
+    def __init__(self, screen):
+        self.screen = screen
+        self.status = 'Running'
+        self.screen_centerx = screen.get_width()/2
+        self.screen_centery = screen.get_height()/2
+        print('Level 1 is running...')
+
+    def getStatus(self):
+        return self.status
+
+    def keydown(self, keyNum):
+        print(keyNum)
+
+    def setup(self):
+
+        # set the background
+        bkgd_color = (100, 100, 255)
+
+        # create the grass
+
+        # submit everything to the screen
+        self.screen.fill(bkgd_color)
+        pygame.display.flip()

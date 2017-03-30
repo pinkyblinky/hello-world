@@ -1,0 +1,20 @@
+import sys
+import pygame
+import time
+
+#set the background
+bkgd_color = (255,255,255)
+
+#put up the welcome message
+basicfont = pygame.font.SysFont(None, 48)
+text = basicfont.render('Welcome to the Math Game! Press <space> to begin...'
+                        , True, (255, 0, 0), (255, 255, 255))
+textrect = text.get_rect()
+textrect.centerx = screen_centerx
+textrect.centery = screen_centery*0.8
+
+#submit everything to the screen
+screen.fill(bkgd_color)
+screen.blit(text,textrect)
+pygame.display.flip()
+

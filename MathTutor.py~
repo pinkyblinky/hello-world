@@ -1,0 +1,13 @@
+import sys
+import pygame
+import time
+
+pygame.init()
+
+print(sys.version)
+
+#build the screen
+screen = pygame.display.set_mode((400,400),)
+
+
+    
