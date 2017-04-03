@@ -1,0 +1,19 @@
+import cv2
+camera_port = 0
+camera = cv2.VideoCapture(camera_port)
+
+
+def get_image():
+    retval, im = camera.read()
+    print(retval)
+    return im
+
+
+print('is the camera open?', camera.isOpened())
+camera_capture = get_image()
+file = "/Users/pinkyblinky01/Documents/AffectProject/test.jpg"
+cv2.imwrite(file, camera_capture)
+del(camera)
+
+
+

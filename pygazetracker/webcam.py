@@ -6,6 +6,8 @@ from generic import EyeTracker
 import cv2
 import PIL
 import numpy
+import __init__ #AS
+import generic #AS
 
 
 # # # # #
@@ -187,8 +189,35 @@ class WebCamTracker(EyeTracker):
 		_message(u'debug', u'webcam.WebCamTracker.close', \
 			u"Successfully disconnected from webcam.")
 
+# # # # # # # # # #
+# Pupil Dilation  #
+# # # # # # # # # #
+# This class was written by Alexander Sachs (heavily influenced by the '__main__' protocol
+class pupilDilation0(object):
+	def __init__(self):
+		print('pupilDilation0 called')
+	def takePic(self):
+		print('takePic called')
+class pupilDilation(object):
+	import generic
+	import __init__
+	def __init__(self):
+		pass
 
-# # # # #
+
+	def processPic(self, img):
+#	        filepath = '/Users/pinkyblinky01/Documents/AffectProject/hello-world/face.jpg'
+#		img = cv2.imread(filepath)
+		frame = img[:,:,2]
+		face_cascade = cv2.CascadeClassifier(__init__._FACECASCADE)
+		eye_cascade = cv2.CascadeClassifier(__init__._EYECASCADE)
+		# crop the face
+		success, facecrop = generic._crop_face(frame, face_cascade, minsize=(30, 30))
+		success, eyes = generic._crop_eyes(facecrop, eye_cascade, Lexpect=(0.7,0.4), Rexpect=(0.3,0.4), maxdist=None, maxsize=None)
+		# Find pupils
+		B = generic._find_pupils(eyes[0], eyes[1], glint=True, mode='diameter')
+	        print(B)
+	       
 # DEBUG #
 if __name__ == u'__main__':
 
@@ -206,7 +235,7 @@ if __name__ == u'__main__':
 
 	# In DUMMY mode, load an existing image (useful for quick debugging).
 	if DUMMY:
-		filepath = os.path.join(os.path.dirname(os.path.abspath(__file__)), u'test.jpg')
+		filepath = os.path.join(os.path.dirname(os.path.abspath(__file__)), u'testA.jpg')
 		img = cv2.imread(filepath)
 		# Return the red component of the obtained frame.
 		if MODE == 'R':
